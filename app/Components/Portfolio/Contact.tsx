@@ -1,13 +1,15 @@
-import { ArrowUpRight, Github, Twitter, Linkedin, Instagram } from "lucide-react";
+"use client";
+
+import { ArrowUpRight, Circle, Sparkles, Link, MessageCircle } from "lucide-react";
 import { useRef, useState } from "react";
 import Reveal from "./Reveal";
 import Stagger from "./Stagger";
 
 const socials = [
-  { icon: Github, label: "GitHub", handle: "@jiaxuan" },
-  { icon: Twitter, label: "X / Twitter", handle: "@jiaxuan_design" },
-  { icon: Linkedin, label: "LinkedIn", handle: "in/jiaxuan" },
-  { icon: Instagram, label: "Instagram", handle: "@jiaxuan.studio" },
+  { icon: Circle, label: "GitHub", handle: "@jiaxuan" },
+  { icon: Sparkles, label: "X / Twitter", handle: "@jiaxuan_design" },
+  { icon: Link, label: "LinkedIn", handle: "in/jiaxuan" },
+  { icon: MessageCircle, label: "Instagram", handle: "@jiaxuan.studio" },
 ];
 
 export default function Contact() {

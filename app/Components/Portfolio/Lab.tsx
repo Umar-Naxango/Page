@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import { Image as ImageIcon, Film, Lightbulb } from "lucide-react";
 import Reveal from "./Reveal";

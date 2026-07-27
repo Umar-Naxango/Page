@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslation } from "react-i18next";
 
 import {
@@ -23,7 +25,7 @@ export const LanguageSwitcher = ({ className }: LanguageSwitcherProps) => {
   return (
     <Select
       value={currentLanguage}
-      onValueChange={(language) => {
+      onValueChange={(language: string) => {
         void i18n.changeLanguage(language);
       }}
     >
