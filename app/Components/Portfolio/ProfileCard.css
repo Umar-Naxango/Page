@@ -1,0 +1,339 @@
+.pc-card-wrapper {
+    --card-radius: 28px;
+    --card-aspect: 0.78;
+    --pointer-x: 50%;
+    --pointer-y: 50%;
+    --pointer-from-center: 0;
+    --pointer-from-top: 0.5;
+    --pointer-from-left: 0.5;
+    --background-x: 50%;
+    --background-y: 50%;
+    --rotate-x: 0deg;
+    --rotate-y: 0deg;
+    --sunpillar-1: hsl(2, 100%, 73%);
+    --sunpillar-2: hsl(53, 100%, 69%);
+    --sunpillar-3: hsl(93, 100%, 69%);
+    --sunpillar-4: hsl(176, 100%, 76%);
+    --sunpillar-5: hsl(228, 100%, 74%);
+    --sunpillar-6: hsl(283, 100%, 73%);
+    --sunpillar-clr-1: var(--sunpillar-1);
+    --sunpillar-clr-2: var(--sunpillar-2);
+    --sunpillar-clr-3: var(--sunpillar-3);
+    --sunpillar-clr-4: var(--sunpillar-4);
+    --sunpillar-clr-5: var(--sunpillar-5);
+    --sunpillar-clr-6: var(--sunpillar-6);
+
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: var(--card-aspect);
+    perspective: 1000px;
+    transform: translate3d(0, 0, 0.1px);
+}
+
+.pc-behind {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--card-radius);
+    background: radial-gradient(circle at center,
+            var(--behind-glow-color) 0%,
+            transparent var(--behind-glow-size));
+    filter: blur(40px);
+    opacity: 0.7;
+    transform: translate3d(0, 0, -10px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.pc-card-shell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--card-radius);
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 0.1px) rotateX(var(--rotate-y)) rotateY(var(--rotate-x));
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.pc-card-shell.active {
+    transition: none;
+}
+
+.pc-card-shell.entering {
+    transition: transform 0.18s ease-out;
+}
+
+.pc-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    background: #0f0d0b;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.08) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+        0 30px 80px -30px rgba(0, 0, 0, 0.8);
+}
+
+.pc-inside {
+    position: absolute;
+    inset: 1px;
+    border-radius: calc(var(--card-radius) - 1px);
+    overflow: hidden;
+    background:
+        var(--inner-gradient),
+        radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),
+            hsla(266, 100%, 90%, 0.4) 4%,
+            hsla(266, 50%, 80%, 0.2) 10%,
+            hsla(266, 25%, 70%, 0) 50%),
+        radial-gradient(35% 52% at 55% 20%,
+            #00ffaac4 0%,
+            #073aff00 100%),
+        radial-gradient(100% 100% at 50% 50%, #00c1ffff 1%, #073aff00 76%),
+        conic-gradient(from 124deg at 50% 50%,
+            #c137ffff 0%,
+            #07c6ffff 40%,
+            #07c6ffff 60%,
+            #c137ffff 100%);
+    background-position: center, var(--background-x) var(--background-y), center, center, center;
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+}
+
+.pc-shine {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-image:
+        repeating-linear-gradient(0deg,
+            var(--sunpillar-clr-1) calc(5% * 1),
+            var(--sunpillar-clr-2) calc(5% * 2),
+            var(--sunpillar-clr-3) calc(5% * 3),
+            var(--sunpillar-clr-4) calc(5% * 4),
+            var(--sunpillar-clr-5) calc(5% * 5),
+            var(--sunpillar-clr-6) calc(5% * 6)),
+        repeating-linear-gradient(-45deg,
+            #0e152e 0%,
+            hsl(180, 10%, 60%) 3.8%,
+            hsl(180, 29%, 66%) 4.5%,
+            hsl(180, 10%, 60%) 5.2%,
+            #0e152e 10%,
+            #0e152e 12%),
+        radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y),
+            hsla(0, 0%, 0%, 0.1) 12%,
+            hsla(0, 0%, 0%, 0.15) 20%,
+            hsla(0, 0%, 0%, 0.25) 120%);
+    background-blend-mode: color, hard-light;
+    background-size: 500% 500%, 300% 300%, 200% 200%;
+    background-position: 0% calc(var(--pointer-from-top) * 500%),
+        var(--background-x) var(--background-y),
+        center;
+    mix-blend-mode: color-dodge;
+    filter: brightness(0.66) contrast(1.33) saturate(0.33) opacity(0.5);
+    opacity: calc(0.7 + var(--pointer-from-center) * 0.3);
+    mask-image: var(--icon);
+    -webkit-mask-image: var(--icon);
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    pointer-events: none;
+}
+
+.pc-card-shell.active .pc-shine,
+.pc-card-shell:hover .pc-shine {
+    filter: brightness(0.85) contrast(1.5) saturate(0.5);
+    animation: none;
+}
+
+.pc-glare {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y),
+            hsl(248, 25%, 80%) 12%,
+            hsla(207, 40%, 30%, 0.8) 90%);
+    mix-blend-mode: overlay;
+    filter: brightness(0.8) contrast(1.2);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.pc-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.pc-avatar-content {
+    justify-content: flex-end;
+}
+
+.pc-avatar-content .avatar {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    max-height: 92%;
+    object-fit: contain;
+    object-position: bottom center;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.pc-avatar-content .avatar-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: none;
+    left: 0;
+    bottom: 0;
+}
+
+.pc-user-info {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    pointer-events: auto;
+}
+
+.pc-user-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.pc-mini-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.pc-mini-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pc-user-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.pc-handle {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -0.005em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pc-status {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.pc-contact-btn {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.pc-contact-btn:hover {
+    background: #fff;
+    color: #0f0d0b;
+    border-color: #fff;
+}
+
+.pc-details {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin-bottom: 4px;
+    pointer-events: none;
+}
+
+.pc-details h3 {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 0 0 4px 0;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
+.pc-details p {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+}
+
+/* Grain overlay */
+.pc-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-image: var(--grain);
+    background-size: 200px 200px;
+    mix-blend-mode: overlay;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 4;
+}
