@@ -12,9 +12,9 @@ import {
 
 export * from "./util";
 
-const baseUrl = import.meta.env.BASE_URL.endsWith("/")
-  ? import.meta.env.BASE_URL
-  : `${import.meta.env.BASE_URL}/`;
+const baseUrl = ((import.meta as ImportMeta & { env?: { BASE_URL?: string } }).env?.BASE_URL ?? "/").endsWith("/")
+  ? ((import.meta as ImportMeta & { env?: { BASE_URL?: string } }).env?.BASE_URL ?? "/")
+  : `${((import.meta as ImportMeta & { env?: { BASE_URL?: string } }).env?.BASE_URL ?? "/")}/`;
 
 void i18n
   .use(HttpBackend)
