@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const BG_VIDEO = "https://grazia-prod.oss-ap-southeast-1.aliyuncs.com/resources/uid_100059067/c72b493c-8e53-4b.mp4";
-const POSTER = "/hero-poster.jpg";
+const POSTER = "/hero-poster.svg";
 
 /** Two stacked videos. Bottom is held at opacity 1, only the top fades 1 → 0.
  *  No brightness dip, and the visual seam of the source video is hidden because
@@ -109,8 +109,7 @@ function SeamlessVideo() {
         autoPlay
         playsInline
         preload="auto"
-        // @ts-expect-error fetchpriority is a valid HTML attribute, not yet typed in React DOM
-        fetchpriority="high"
+        fetchPriority="high"
         className="absolute inset-0 w-full h-full object-cover object-center"
         style={{
           ...baseStyle,
