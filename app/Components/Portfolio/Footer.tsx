@@ -39,14 +39,14 @@ export default function Footer() {
                     }}>
                 <span className="font-serif-i italic text-[18px] leading-none"
                       style={{ color: "hsl(var(--gold))", transform: "translateY(-1px)" }}>
-                  J
+                  S
                 </span>
                 <span className="absolute -bottom-px left-1/2 -translate-x-1/2 w-2 h-px"
                       style={{ background: "hsl(var(--neon))" }} />
               </span>
               <div className="flex flex-col leading-none">
                 <span className="font-tight text-[13px] font-semibold tracking-[0.18em] text-white">
-                  JIAXUAN
+                  SOL-SMITH
                 </span>
                 <span className="font-tight text-[9px] tracking-[0.32em] uppercase text-white/45 mt-1">
                   Design Studio
@@ -121,13 +121,13 @@ export default function Footer() {
                 letterSpacing="-6"
                 fill="url(#wm-fill)"
               >
-                JIAXUAN
+                SOL-SMITH
               </tspan>
               <tspan
                 fontFamily="'Instrument Serif', serif"
                 fontStyle="italic"
                 fontWeight={400}
-                fill="hsl(45 90% 65% / 0.4)"
+                fill="hsl(var(--bone) / 0.4)"
               >
                 .studio
               </tspan>
@@ -139,7 +139,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-7"
              style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
           <div className="font-tight text-white/40 text-[11px] font-light tracking-wide">
-            © 2026 JIAXUAN STUDIO · All rights reserved · Crafted in{" "}
+            © 2026 SOL-SMITH STUDIO · All rights reserved · Crafted in{" "}
             <span className="font-serif-i italic" style={{ color: "hsl(var(--gold) / 0.7)" }}>Beijing</span>
           </div>
           <div className="flex items-center gap-6">

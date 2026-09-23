@@ -149,12 +149,12 @@ export default function PortfolioHero() {
         <div className="absolute inset-0 z-10 pointer-events-none"
              style={{
                background:
-                 "radial-gradient(ellipse at 50% 35%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 60%, rgba(18,16,14,0.85) 100%)",
+                 "radial-gradient(ellipse at 50% 35%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 60%, rgba(20,32,74,0.85) 100%)",
              }} />
         <div className="absolute inset-x-0 bottom-0 h-[40%] z-10 pointer-events-none"
              style={{
                background:
-                 "linear-gradient(to bottom, transparent 0%, rgba(18,16,14,0.55) 60%, rgba(18,16,14,0.98) 100%)",
+                 "linear-gradient(to bottom, transparent 0%, rgba(20,32,74,0.55) 60%, rgba(20,32,74,0.98) 100%)",
              }} />
         {/* Subtle film grain feel */}
         <div className="absolute inset-0 mix-blend-overlay opacity-[0.07] pointer-events-none z-10"
@@ -221,7 +221,7 @@ export default function PortfolioHero() {
         <p className="font-tight text-white/65 text-[13px] md:text-[15px] font-light tracking-wide leading-relaxed
                       mt-9 max-w-[480px] animate-fade-in-up"
            style={{ animationDelay: "0.75s", animationFillMode: "both" }}>
-          I'm <span className="text-white font-medium">Jiaxuan</span> — designing identity, product
+          I'm <span className="text-white font-medium">Sol-Smith</span> — designing identity, product
           and motion at the seam where craftsmanship meets generative tools.
         </p>
 

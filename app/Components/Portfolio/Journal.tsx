@@ -92,7 +92,7 @@ export default function Journal() {
                 <div className="absolute inset-0"
                      style={{
                        background:
-                         "linear-gradient(to top, rgba(18,16,14,0.85) 0%, rgba(18,16,14,0.3) 50%, rgba(18,16,14,0.1) 100%)",
+                         "linear-gradient(to top, rgba(20,32,74,0.85) 0%, rgba(20,32,74,0.3) 50%, rgba(20,32,74,0.1) 100%)",
                      }} />
                 <span className="absolute top-5 left-5 font-tight text-[10px] tracking-[0.25em] uppercase font-semibold px-3 py-1.5 rounded-full"
                       style={{ background: "hsl(var(--neon))", color: "hsl(var(--background))" }}>
@@ -140,7 +140,7 @@ export default function Journal() {
                   <div className="absolute inset-0"
                        style={{
                          background:
-                           "linear-gradient(to right, rgba(18,16,14,0.4), rgba(18,16,14,0.1))",
+                           "linear-gradient(to right, rgba(20,32,74,0.4), rgba(20,32,74,0.1))",
                        }} />
                 </div>
                 <div className="p-5 md:p-6 flex-1 flex flex-col justify-center">

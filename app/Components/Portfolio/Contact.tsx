@@ -6,10 +6,10 @@ import Reveal from "./Reveal";
 import Stagger from "./Stagger";
 
 const socials = [
-  { icon: Circle, label: "GitHub", handle: "@jiaxuan" },
-  { icon: Sparkles, label: "X / Twitter", handle: "@jiaxuan_design" },
-  { icon: Link, label: "LinkedIn", handle: "in/jiaxuan" },
-  { icon: MessageCircle, label: "Instagram", handle: "@jiaxuan.studio" },
+  { icon: Circle, label: "GitHub", handle: "@solsmith" },
+  { icon: Sparkles, label: "X / Twitter", handle: "@solsmith_design" },
+  { icon: Link, label: "LinkedIn", handle: "in/sol-smith" },
+  { icon: MessageCircle, label: "Instagram", handle: "@solsmith.studio" },
 ];
 
 export default function Contact() {
@@ -112,7 +112,7 @@ export default function Contact() {
               className="absolute inset-0 pointer-events-none transition-opacity duration-500"
               style={{
                 opacity: pointer.active ? 1 : 0,
-                background: `radial-gradient(420px circle at ${pointer.x}% ${pointer.y}%, hsl(76 100% 50% / 0.18), transparent 60%)`,
+                background: `radial-gradient(420px circle at ${pointer.x}% ${pointer.y}%, hsl(var(--royal-blue) / 0.18), transparent 60%)`,
               }}
             />
             {/* Trailing gold halo offset for depth */}
@@ -120,7 +120,7 @@ export default function Contact() {
               className="absolute inset-0 pointer-events-none transition-opacity duration-700 mix-blend-screen"
               style={{
                 opacity: pointer.active ? 1 : 0,
-                background: `radial-gradient(260px circle at ${pointer.x}% ${pointer.y}%, hsl(45 90% 65% / 0.14), transparent 65%)`,
+                background: `radial-gradient(260px circle at ${pointer.x}% ${pointer.y}%, hsl(var(--bone) / 0.14), transparent 65%)`,
               }}
             />
             {/* Hairline grid that lights up under cursor */}
@@ -140,7 +140,7 @@ export default function Contact() {
               className="absolute inset-0 pointer-events-none rounded-3xl transition-opacity duration-500"
               style={{
                 opacity: pointer.active ? 1 : 0,
-                background: `radial-gradient(600px circle at ${pointer.x}% ${pointer.y}%, hsl(76 100% 50% / 0.5), transparent 40%)`,
+                background: `radial-gradient(600px circle at ${pointer.x}% ${pointer.y}%, hsl(var(--royal-blue) / 0.5), transparent 40%)`,
                 WebkitMask:
                   "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
                 WebkitMaskComposite: "xor",
@@ -164,7 +164,7 @@ export default function Contact() {
                   </span>
                 </div>
                 <a
-                  href="mailto:hi@jiaxuan.studio"
+                  href="mailto:hi@sol-smith.studio"
                   className="font-tight text-white text-[28px] md:text-[44px] lg:text-[52px] font-medium tracking-[-0.02em] hover:opacity-90 transition-opacity inline-flex items-center gap-3 group"
                 >
                   hi@
@@ -172,7 +172,7 @@ export default function Contact() {
                     className="font-serif-i italic font-normal"
                     style={{ color: "hsl(var(--gold))" }}
                   >
-                    jiaxuan
+                    sol-smith
                   </span>
                   .studio
                   <ArrowUpRight
@@ -206,7 +206,7 @@ export default function Contact() {
           {socials.map(({ icon: Icon, label, handle }, i) => (
             <a key={label} href="#"
                className="group p-6 flex items-center justify-between transition-all hover:bg-white/[0.02]"
-               style={{ background: "rgba(22,19,16,1)" }}>
+               style={{ background: "rgba(20,32,74,1)" }}>
               <div>
                 <div className="font-tight text-[9.5px] tracking-[0.3em] uppercase font-semibold text-white/45 mb-1.5">
                   0{i + 1} · {label}

@@ -137,7 +137,7 @@ export default function ProjectsShowcase() {
                 <div className="absolute inset-0 pointer-events-none"
                      style={{
                        background:
-                         "linear-gradient(to top, rgba(18,16,14,0.95) 0%, rgba(18,16,14,0.45) 38%, rgba(18,16,14,0.05) 70%, rgba(18,16,14,0.25) 100%)",
+                         "linear-gradient(to top, rgba(20,32,74,0.95) 0%, rgba(20,32,74,0.45) 38%, rgba(20,32,74,0.05) 70%, rgba(20,32,74,0.25) 100%)",
                      }} />
 
                 {/* corner ticks */}

@@ -10,12 +10,12 @@
     --background-y: 50%;
     --rotate-x: 0deg;
     --rotate-y: 0deg;
-    --sunpillar-1: hsl(2, 100%, 73%);
-    --sunpillar-2: hsl(53, 100%, 69%);
-    --sunpillar-3: hsl(93, 100%, 69%);
-    --sunpillar-4: hsl(176, 100%, 76%);
-    --sunpillar-5: hsl(228, 100%, 74%);
-    --sunpillar-6: hsl(283, 100%, 73%);
+    --sunpillar-1: hsl(42, 32%, 87%);
+    --sunpillar-2: hsl(187, 52%, 77%);
+    --sunpillar-3: hsl(225, 73%, 57%);
+    --sunpillar-4: hsl(187, 52%, 77%);
+    --sunpillar-5: hsl(225, 73%, 57%);
+    --sunpillar-6: hsl(42, 32%, 87%);
     --sunpillar-clr-1: var(--sunpillar-1);
     --sunpillar-clr-2: var(--sunpillar-2);
     --sunpillar-clr-3: var(--sunpillar-3);
@@ -71,7 +71,7 @@
     height: 100%;
     border-radius: var(--card-radius);
     overflow: hidden;
-    background: #0f0d0b;
+    background: #14204a;
     box-shadow:
         0 1px 0 rgba(255, 255, 255, 0.08) inset,
         0 -1px 0 rgba(0, 0, 0, 0.4) inset,
@@ -86,18 +86,18 @@
     background:
         var(--inner-gradient),
         radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),
-            hsla(266, 100%, 90%, 0.4) 4%,
-            hsla(266, 50%, 80%, 0.2) 10%,
-            hsla(266, 25%, 70%, 0) 50%),
+            hsla(187, 52%, 77%, 0.4) 4%,
+            hsla(187, 52%, 77%, 0.2) 10%,
+            hsla(187, 52%, 77%, 0) 50%),
         radial-gradient(35% 52% at 55% 20%,
-            #00ffaac4 0%,
-            #073aff00 100%),
-        radial-gradient(100% 100% at 50% 50%, #00c1ffff 1%, #073aff00 76%),
+            #b0e0e6c4 0%,
+            #4169e100 100%),
+        radial-gradient(100% 100% at 50% 50%, #b0e0e6ff 1%, #4169e100 76%),
         conic-gradient(from 124deg at 50% 50%,
-            #c137ffff 0%,
-            #07c6ffff 40%,
-            #07c6ffff 60%,
-            #c137ffff 100%);
+            #4169e1ff 0%,
+            #b0e0e6ff 40%,
+            #b0e0e6ff 60%,
+            #4169e1ff 100%);
     background-position: center, var(--background-x) var(--background-y), center, center, center;
     background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
 }

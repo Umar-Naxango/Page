@@ -29,7 +29,7 @@ const skills = [
 ];
 
 const timeline = [
-  { year: "2026", role: "Independent Designer · Beijing", note: "Founded JIAXUAN STUDIO — designing AI-native products." },
+  { year: "2026", role: "Independent Designer · Beijing", note: "Founded SOL-SMITH STUDIO — designing AI-native products." },
   { year: "2023", role: "Design Lead · ByteDance", note: "Led the visual language for an internal AI tooling platform." },
   { year: "2020", role: "Senior Product Designer · Tencent", note: "Shipped four consumer products spanning music, social, and EdTech." },
   { year: "2017", role: "BFA · China Academy of Art", note: "Graduated with honors in Interaction Design." },
@@ -88,7 +88,7 @@ export default function About() {
               </div>
 
               <p className="font-tight text-white/90 text-[19px] md:text-[22px] leading-[1.5] font-light tracking-[-0.005em] mb-8">
-                I'm <span className="text-white font-medium">Jiaxuan</span> — an independent designer working
+                I'm <span className="text-white font-medium">Sol-Smith</span> — an independent designer working
                 at the seam where{" "}
                 <span className="font-serif-i italic" style={{ color: "hsl(var(--gold))" }}>human craft</span>{" "}
                 meets{" "}
@@ -162,7 +162,7 @@ export default function About() {
                  style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.06)" }}>
           {stats.map(({ value, suffix, label }, i) => (
             <div key={label} className="p-6 md:p-8 relative group transition-colors hover:bg-white/[0.02]"
-                 style={{ background: "rgba(22,19,16,1)" }}>
+                 style={{ background: "rgba(20,32,74,1)" }}>
               <span className="font-tight text-[10px] font-semibold tracking-[0.3em] uppercase text-white/35 mb-3 block">
                 {String(i + 1).padStart(2, "0")} ·{" "}
                 <span className="font-serif-i italic font-normal text-white/55">{label}</span>

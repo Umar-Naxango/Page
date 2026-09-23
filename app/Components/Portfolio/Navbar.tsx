@@ -62,8 +62,8 @@ export default function Navbar() {
       }`}
       style={{
         background: scrolled
-          ? "linear-gradient(to bottom, rgba(18,16,14,0.78) 0%, rgba(18,16,14,0.55) 70%, rgba(18,16,14,0) 100%)"
-          : "linear-gradient(to bottom, rgba(18,16,14,0.35) 0%, rgba(18,16,14,0.12) 60%, rgba(18,16,14,0) 100%)",
+          ? "linear-gradient(to bottom, rgba(20,32,74,0.78) 0%, rgba(20,32,74,0.55) 70%, rgba(20,32,74,0) 100%)"
+          : "linear-gradient(to bottom, rgba(20,32,74,0.35) 0%, rgba(20,32,74,0.12) 60%, rgba(20,32,74,0) 100%)",
         backdropFilter: scrolled ? "blur(14px) saturate(140%)" : "blur(4px)",
         WebkitBackdropFilter: scrolled ? "blur(14px) saturate(140%)" : "blur(4px)",
       }}
@@ -82,7 +82,7 @@ export default function Navbar() {
           onClick={() => handleNavClick("home")}
           className="group flex items-center gap-3.5"
         >
-          {/* J monogram */}
+          {/* S monogram */}
           <span
             className="relative flex items-center justify-center w-9 h-9 rounded-full overflow-hidden transition-transform group-hover:scale-105"
             style={{
@@ -95,7 +95,7 @@ export default function Navbar() {
               className="font-serif-i text-[18px] leading-none"
               style={{ color: "hsl(var(--gold))", transform: "translateY(-1px)" }}
             >
-              J
+              S
             </span>
             <span
               className="absolute -bottom-px left-1/2 -translate-x-1/2 w-2 h-px"
@@ -106,7 +106,7 @@ export default function Navbar() {
           {/* Wordmark */}
           <span className="hidden sm:flex flex-col items-start leading-none">
             <span className="font-tight text-[13px] font-semibold tracking-[0.18em] text-white">
-              JIAXUAN
+              SOL-SMITH
             </span>
             <span className="font-tight text-[9px] tracking-[0.32em] uppercase text-white/45 mt-1">
               Design Studio

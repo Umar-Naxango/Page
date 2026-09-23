@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useCallback, useMemo } from "react";
 import "./ProfileCard.css";
 
 const DEFAULT_INNER_GRADIENT =
-  "linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)";
+  "linear-gradient(145deg,hsl(225 73% 57% / 0.55) 0%,hsl(187 52% 77% / 0.35) 100%)";
 
 const ANIMATION_CONFIG = {
   INITIAL_DURATION: 1200,
@@ -60,7 +60,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   enableMobileTilt = false,
   mobileTiltSensitivity = 5,
   miniAvatarUrl,
-  name = "Javi A. Torres",
+  name = "Sol-Smith",
   title = "Software Engineer",
   handle = "javicodes",
   status = "Online",
