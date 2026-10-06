@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sol-Smith | Independent Design Studio",
-  description: "Sol-Smith creates visual systems, products, and motion for the AI era.",
+  title: "New Energy Editorial Studio | Clean Power Vision",
+  description: "Showcasing clean-power vision, projects, and impact through a premium corporate experience.",
+  openGraph: {
+    title: "New Energy Editorial Studio",
+    description: "Leading the future of sustainable energy with clean-power solutions.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -25,9 +31,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

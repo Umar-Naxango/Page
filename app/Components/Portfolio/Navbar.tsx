@@ -105,11 +105,10 @@ export default function Navbar() {
 
           {/* Wordmark */}
           <span className="hidden sm:flex flex-col items-start leading-none">
-            <span className="font-tight text-[13px] font-semibold tracking-[0.18em] text-white">
               SOL-SMITH
             </span>
             <span className="font-tight text-[9px] tracking-[0.32em] uppercase text-white/45 mt-1">
-              Design Studio
+              Solar Installer
             </span>
           </span>
         </button>
@@ -173,7 +172,7 @@ export default function Navbar() {
               />
             </span>
             <span className="font-tight text-[10px] font-medium tracking-[0.22em] uppercase text-white/65">
-              Available · Q3
+              Available · 24/7
             </span>
           </div>
 
@@ -186,7 +185,7 @@ export default function Navbar() {
             }}
           >
             <span className="font-tight text-[11px] font-semibold tracking-[0.12em] uppercase text-white group-hover:text-black transition-colors">
-              Let's Talk
+              Contact Us
             </span>
             <span
               className="w-7 h-7 rounded-full flex items-center justify-center transition-all group-hover:rotate-45"
