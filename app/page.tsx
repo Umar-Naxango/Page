@@ -10,7 +10,7 @@ import Footer from "@/components/portfolio/Footer";
 
 export default function Index() {
   return (
-    <div className="relative w-full min-h-screen font-body bg-background text-foreground overflow-x-hidden">
+    <div suppressHydrationWarning className="relative w-full min-h-screen font-body bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />

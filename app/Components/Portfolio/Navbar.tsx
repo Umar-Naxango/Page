@@ -105,6 +105,7 @@ export default function Navbar() {
 
           {/* Wordmark */}
           <span className="hidden sm:flex flex-col items-start leading-none">
+            <span className="font-serif tracking-widest text-[16px] text-white">
               SOL-SMITH
             </span>
             <span className="font-tight text-[9px] tracking-[0.32em] uppercase text-white/45 mt-1">
