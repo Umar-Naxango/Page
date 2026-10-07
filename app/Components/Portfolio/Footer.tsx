@@ -56,7 +56,7 @@ export default function Footer() {
             <p className="font-tight text-white/55 text-[13px] leading-[1.7] font-light max-w-sm mb-6">
               An independent designer building{" "}
               <span className="font-serif-i italic" style={{ color: "hsl(var(--gold))" }}>tools</span>{" "}
-              for the imagination. Based in Beijing, working with teams everywhere.
+              for the imagination. Based in Kano, working with teams everywhere.
             </p>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full"
                  style={{ border: "1px solid rgba(255,255,255,0.12)" }}>
@@ -139,8 +139,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-7"
              style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
           <div className="font-tight text-white/40 text-[11px] font-light tracking-wide">
-            © 2026 SOL-SMITH STUDIO · All rights reserved · Crafted in{" "}
-            <span className="font-serif-i italic" style={{ color: "hsl(var(--gold) / 0.7)" }}>Beijing</span>
+            © 2026 Voostech · Published by UmarNaxango · All rights reserved · Crafted in{" "}
+            <span className="font-serif-i italic" style={{ color: "hsl(var(--gold) / 0.7)" }}>Kano</span>
           </div>
           <div className="flex items-center gap-6">
             <a href="#" className="font-tight text-white/45 hover:text-white text-[11px] tracking-wide transition-colors">Privacy</a>

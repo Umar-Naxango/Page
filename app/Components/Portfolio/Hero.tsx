@@ -199,7 +199,7 @@ export default function PortfolioHero() {
              style={{ animationDelay: "0.4s", animationFillMode: "both" }}>
           <span className="w-8 h-px bg-white/40" />
           <span className="font-tight text-[10px] font-semibold tracking-[0.5em] uppercase text-white/75">
-            Designer · Beijing
+            Designer · Kano
           </span>
           <span className="w-8 h-px bg-white/40" />
         </div>

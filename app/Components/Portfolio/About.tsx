@@ -7,7 +7,7 @@ import Stagger from "./Stagger";
 import { useInView } from "@/hooks/use-in-view";
 
 const meta = [
-  { k: "Based in", v: "Beijing, CN", icon: MapPin },
+  { k: "Based in", v: "Kano, NG", icon: MapPin },
   { k: "Local Time", v: "GMT +8", icon: Clock },
   { k: "Studio Since", v: "2017", icon: null },
   { k: "Languages", v: "中文 · English", icon: null },
@@ -29,7 +29,7 @@ const skills = [
 ];
 
 const timeline = [
-  { year: "2026", role: "Independent Designer · Beijing", note: "Founded SOL-SMITH STUDIO — designing AI-native products." },
+  { year: "2026", role: "Independent Designer · Kano", note: "Founded SOL-SMITH STUDIO — designing AI-native products." },
   { year: "2023", role: "Design Lead · ByteDance", note: "Led the visual language for an internal AI tooling platform." },
   { year: "2020", role: "Senior Product Designer · Tencent", note: "Shipped four consumer products spanning music, social, and EdTech." },
   { year: "2017", role: "BFA · China Academy of Art", note: "Graduated with honors in Interaction Design." },
