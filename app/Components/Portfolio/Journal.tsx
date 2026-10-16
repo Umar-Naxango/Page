@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowUpRight } from "lucide-react";
 import Reveal from "./Reveal";
 import Stagger from "./Stagger";

@@ -1,15 +1,27 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const navLinks = [
   { label: "Studio", cn: "工作室", target: "about", num: "01" },
   { label: "Work", cn: "作品", target: "projects", num: "02" },
   { label: "Lab", cn: "实验", target: "lab", num: "03" },
+  { label: "Journal", cn: "日志", target: "journal", num: "04" },
 ];
 
+/** Routes for sections that live on their own pages. */
+const routes: Record<string, string> = {
+  about: "/about",
+  projects: "/projects",
+  lab: "/lab",
+  journal: "/journal",
+  contact: "/contact",
+};
+
 export default function Navbar() {
+  const router = useRouter();
   const [activeNav, setActiveNav] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -23,7 +35,10 @@ export default function Navbar() {
     if (el) {
       const y = el.getBoundingClientRect().top + window.scrollY - 90;
       window.scrollTo({ top: y, behavior: "smooth" });
+      return;
     }
+    // The target section is rendered on its own route (e.g. /journal).
+    router.push(routes[target] ?? "/");
   };
 
   useEffect(() => {

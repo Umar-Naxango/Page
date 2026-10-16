@@ -1,4 +1,16 @@
+"use client";
+
+import Link from "next/link";
 import { ArrowUp } from "lucide-react";
+
+/** Routes for the pages linked from the "Navigate" column. */
+const navigateRoutes: Record<string, string> = {
+  Home: "/",
+  Work: "/projects",
+  Studio: "/about",
+  Lab: "/lab",
+  Contact: "/contact",
+};
 
 const cols = [
   {
@@ -78,15 +90,18 @@ export default function Footer() {
                 0{idx + 1} · {c.title}
               </h4>
               <ul className="space-y-2.5">
-                {c.links.map((l) => (
-                  <li key={l}>
-                    <a href="#" className="font-tight text-white/65 hover:text-white text-[13px] font-light transition-colors inline-flex items-baseline gap-2 group">
-                      <span className="font-serif-i italic text-[12px] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
-                            style={{ color: "hsl(var(--neon))" }}>/</span>
-                      {l}
-                    </a>
-                  </li>
-                ))}
+                {c.links.map((l) => {
+                  const href = navigateRoutes[l] ?? "#";
+                  return (
+                    <li key={l}>
+                      <Link href={href} className="font-tight text-white/65 hover:text-white text-[13px] font-light transition-colors inline-flex items-baseline gap-2 group">
+                        <span className="font-serif-i italic text-[12px] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
+                              style={{ color: "hsl(var(--neon))" }}>/</span>
+                        {l}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

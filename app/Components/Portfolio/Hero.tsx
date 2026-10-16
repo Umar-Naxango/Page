@@ -109,7 +109,6 @@ function SeamlessVideo() {
         autoPlay
         playsInline
         preload="auto"
-        fetchPriority="high"
         className="absolute inset-0 w-full h-full object-cover object-center"
         style={{
           ...baseStyle,

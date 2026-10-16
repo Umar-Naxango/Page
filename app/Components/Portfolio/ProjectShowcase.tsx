@@ -5,7 +5,20 @@ import { useState, useEffect } from "react";
 import Reveal from "./Reveal";
 import { fetchMeta } from "@/actions";
 
-const allProjects = [
+type Project = {
+  id: number;
+  title: string;
+  subtitle: string;
+  year: string;
+  cat: string;
+  tags: string[];
+  desc: string;
+  cover: string;
+  /** When set, the project is rendered inside an iframe instead of a cover image. */
+  url?: string;
+};
+
+const allProjects: Project[] = [
   {
     id: 1,
     title: "Memory Galaxy",
